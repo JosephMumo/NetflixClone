@@ -9,7 +9,7 @@ function NavBar() {
         <h1 className='text-3xl text-primary font-bold'>NETFLIX</h1>
       </Link>
       <div className='flex items-center justify-around space-x-2'>
-        <Link to='/signin'>
+        <Link to='/login'>
           <button className=''>Sign In</button>
         </Link>
         <Link to='/signup'>
