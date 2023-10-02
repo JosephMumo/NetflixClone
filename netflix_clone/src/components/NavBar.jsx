@@ -10,10 +10,10 @@ function NavBar() {
       </Link>
       <div className='flex items-center justify-around space-x-2'>
         <Link to='/login'>
-          <button className=''>Sign In</button>
+          <button className=''>LogIn</button>
         </Link>
         <Link to='/signup'>
-          <button className='bg-primary p-2 px-4 rounded-md'>Sign Up</button>
+          <button className='bg-primary p-2 px-4 rounded-md'>SignUp</button>
         </Link>
       </div>
     </div>
