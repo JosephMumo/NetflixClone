@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../images/Net.jpg'
+import { Link } from 'react-router-dom'
 
 function Login() {
   const styles = {
@@ -15,6 +16,19 @@ function Login() {
           <input className='bg-gray-800 rounded px-1 h-9 text-white  border-none' placeholder='Email' id='email' name='email'></input>
           <br />
           <button type="submit" className='bg-primary hover:bg-red-600 text-white  p-2 rounded-sm'>Login</button>
+          <div className='flex flex-row justify-between'>
+            <section className='flex flex-row space-x-3'>
+              <input type='checkbox' id='checkbox' name='checkbox'></input>
+              <label htmlFor='checkbox'>Remember me?</label>
+            </section>
+            <p>Need help?</p>
+          </div>
+          <br />
+          <p>New to Netflix?
+            <Link to='/signin'>
+              <button className='text-white'>Sign up now</button>
+            </Link>
+          </p>
         </form>
       </div>
     </div>
