@@ -11,7 +11,6 @@ function Main() {
         axios.get(requests.requestPopular)
         .then((res) => setMovies(res.data.results))
     }, [])
-    console.log(movie)
 
     const truncateString = (str, num) => {
         if(str?.length > num) {
