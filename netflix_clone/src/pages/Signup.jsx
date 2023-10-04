@@ -1,20 +1,37 @@
 import React from 'react'
 import logo from '../images/Net.jpg'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../context/AuthContext'
+import { useContext, useState } from 'react'
+
 
   
 function Signup() {
   const styles = {
     backgroundImage: `url(${logo})`,
   }
+  const{user, signUp } = useContext(AuthContext)
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    try{
+      await signUp(email, password)
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
   return (
     <div className='text-gray-500 grid place-items-center align-middle h-screen' style={styles}>
       <div className='w-full h-screen bg-black/60 absolute'></div>
       <div className='w-{80%} h-{60%} md:w-1/3 md:h-2/3 px-8 py-24 bg-black/80 absolute rounded'>
-        <form className='flex flex-col space-y-5 z-10'>
-          <h1 className='text-2xl font-bold'>SIGNUP</h1>
-          <input className='bg-gray-800 rounded px-1 h-9 border-none' placeholder='name' id='name' name='fname'></input>
-          <input className='bg-gray-800 rounded px-1 h-9 border-none' placeholder='email' id='email' name='email'></input>
+        <form className='flex flex-col space-y-5 z-10' onSubmit={handleSubmit}>
+          <h1 className='text-3xl text-white font-bold'>Sign Up</h1>
+          <input onChange={(e) => setEmail(e.target.value)} className='bg-gray-800 rounded px-1 h-9 border-none' type='text' placeholder='email' id='email' name='email'></input>
+          <input onChange={(e) => setPassword(e.target.value)} className='bg-gray-800 rounded px-1 h-9 border-none' type='password' placeholder='password' id='password' name='password'></input>
           <br />
           <button type="submit" className='bg-primary hover:bg-red-600 text-white p-2 rounded-sm'>Register</button>
           <div className='flex flex-row justify-between'>
