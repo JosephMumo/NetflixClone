@@ -36,6 +36,7 @@ function Signup() {
           <input onChange={(e) => setPassword(e.target.value)} className='bg-gray-800 rounded px-1 h-9 border-none' type='password' placeholder='password' id='password' name='password' ></input>
           <br />
           <button type="submit" className='bg-primary hover:bg-red-600 text-white p-2 rounded-sm'>Register</button>
+          <br />
           <div className='flex flex-row justify-between'>
             <section className='flex flex-row space-x-3'>
               <input type='checkbox' id='checkbox' name='checkbox'></input>

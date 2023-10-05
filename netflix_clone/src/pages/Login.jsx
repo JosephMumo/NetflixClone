@@ -31,6 +31,7 @@ function Login() {
       <div className='w-{80%} h-{60%} md:w-1/3 md:h-2/3 px-8 py-24 bg-black/80 absolute rounded'>
         <form className='flex flex-col space-y-5 z-10' onSubmit={handleSubmit}>
           <h1 className='text-3xl text-white font-bold'>Sign In</h1>
+          {error && <p className='text-primary text-xs'>{error}</p>}
           <input onChange={(e) => setEmail(e.target.value)} className='bg-gray-800 rounded px-1 h-9 text-white w-full  border-none' type='text' placeholder='email' id='email' name='email'></input>
           <input onChange={(e) => setPassword(e.target.value)} className='bg-gray-800 rounded px-1 h-9 text-white  border-none' type='password' placeholder='password' id='password' name='password'></input>
           <br />
