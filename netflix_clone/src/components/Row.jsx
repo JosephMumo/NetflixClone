@@ -30,7 +30,7 @@ function Row({title, UrlFetch, rowId}) {
     <div className="text-white font-bold md:text-xl p-4 w-full">
         <h3 className="text-white font-bold">{title}</h3>
         <div className="relative flex items-center group">
-            <CiCircleChevLeft size={40} onClick={slideLeft} className="hidden group-hover:block z-10 absolute left-1 cursor-pointer" />
+            <CiCircleChevLeft size={40} onClick={slideLeft} className="hidden group-hover:block z-11 absolute left-1 cursor-pointer" />
             <div id={"slider" + rowId} className="w-full h-full overflow-x-scroll scroll-smooth whitespace-nowrap scrollbar-hide">
                 {movies.map((item, id) => (
                     <Movie 
