@@ -26,7 +26,8 @@ function NavBar() {
       <Link to='/'>
         <h1 className='text-3xl text-primary font-bold'>NETFLIX</h1>
       </Link>
-      {user ?
+      {
+      user ?
         <div className='flex items-center justify-around space-x-3'>
           <Link to='/account'>
             <a data-tooltip-id="my-tooltip" data-tooltip-content={user?.email}>
