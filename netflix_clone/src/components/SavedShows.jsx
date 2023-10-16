@@ -36,7 +36,7 @@ function SavedShows() {
     }
   return (
     <>
-      <h2 className='text-white font-bold md:text-xl p-4'>My Shows</h2>
+      <h2 className='text-white font-bold md:text-xl p-4'>Liked Shows</h2>
       <div className='relative flex items-center group'>
         <CiCircleChevLeft
           onClick={slideLeft}
