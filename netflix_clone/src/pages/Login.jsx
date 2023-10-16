@@ -26,7 +26,7 @@ function Login() {
     }
   }
   return (
-    <div className='text-gray-500 grid place-items-center align-middle h-screen' style={styles}>
+    <div className='text-gray-500 grid place-items-center align-middle h-screen' style={styles} >
       <div className='w-full h-screen bg-black/60 absolute'></div>
       <div className='w-{80%} h-{60%} md:w-1/3 md:h-2/3 px-8 py-24 bg-black/80 absolute rounded'>
         <form className='flex flex-col space-y-5 z-10' onSubmit={handleSubmit}>
@@ -46,7 +46,7 @@ function Login() {
           </div>
           <br />
           <p>New to Netflix?
-            <Link to='/signin'>
+            <Link to='/signup'>
               <button className='text-white'>Sign up now</button>
             </Link>
           </p>
